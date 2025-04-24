@@ -95,7 +95,7 @@ Screen {
         # wrap each line to container width
         width = self.size.width - 4  # some padding
         wrapped = [_wrap_lines(line, width) for line in self.script]
-        history_widget.update("\n".join(f"{i+1}. {wrapped[i]}" for i in range(len(wrapped))))
+        history_widget.update("\n\n".join(f"{i+1}. {wrapped[i]}" for i in range(len(wrapped))))
 
     def handle_canceled(self, evt):
         reason = evt.cancellation_details.reason
